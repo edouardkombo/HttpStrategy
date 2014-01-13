@@ -1,0 +1,27 @@
+{
+    "name": "edouardkombo/http-strategy",
+    "type": "library",
+    "description": "Http Strategy is a collection of classes for handling http requests.",
+    "keywords": ["Http Strategy","TTI","The Troll Inception"],
+    "homepage": "https://github.com/edouardkombo/HttpStrategy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edouard Kombo",
+            "email": "edouard.kombo@gmail.com",
+            "homepage": "http://www.breezeframework.com",
+            "role": "Architect / Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "edouardkombo/abstratct-factory": "1.0.0.*@dev"
+    }, 
+    "autoload": {
+        "psr-0": {
+            "TTI\\HttpStrategy\\": ""
+        }
+    },
+    "target-dir":"TTI/HttpStrategy",      
+    "minimum-stability": "dev"
+}
