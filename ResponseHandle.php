@@ -92,6 +92,17 @@ class ResponseHandle extends HandleAbstraction
         header('Status: ' . $status);
         header('Location: ' . $url);
         exit();
+    }
+    
+    /**
+     * PRG design pattern (Post Redirect Get)
+     * 
+     * @return void
+     */
+    public function prg()
+    {
+        header("Location: " . filter_input(INPUT_SERVER, 'REQUEST_URI'));
+        exit();
     }    
     
     /**
@@ -103,7 +114,7 @@ class ResponseHandle extends HandleAbstraction
      */
     private function _encoding(\TTI\HttpStrategy\RequestHelper $request)
     {
-        $encoding = $request->getEncoding();
+        $encoding = $request->encoding();
        
         if (isset($encoding) && (strpos($encoding, 'gzip') !== false)) {
             $encoding = (string) 'gzip';

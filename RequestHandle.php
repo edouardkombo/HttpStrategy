@@ -67,7 +67,7 @@ class RequestHandle extends HandleAbstraction
      */
     public function input($value)
     {
-        $this->input = (string) 'INPUT_' . strtoupper($value);
+        $this->input = constant('INPUT_' . strtoupper($value));
         
         return (object) $this;
     }  
@@ -93,6 +93,7 @@ class RequestHandle extends HandleAbstraction
         } catch(\RuntimeException $ex) {
             echo $ex->getMessage();
             exit();
+   
         }
     }
     
