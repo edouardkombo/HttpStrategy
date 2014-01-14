@@ -7,6 +7,7 @@ About
 -----
 
 Http Strategy is a collection of classes that help handling http requests.
+We have implemented PRG (Post - Redirect - Get) design pattern.
 
 Requirements
 ------------
