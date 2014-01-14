@@ -65,7 +65,7 @@ class RequestHandle extends HandleAbstraction
      * 
      * @return \TTI\HttpStrategy\RequestHandle
      */
-    protected function input($value)
+    public function input($value)
     {
         $this->input = (string) 'INPUT_' . strtoupper($value);
         

@@ -78,7 +78,7 @@ class PassportHandle extends HandleAbstraction
      * 
      * @return \TTI\HttpStrategy\RequestHandle
      */
-    protected function input($value = null)
+    public function input($value = null)
     {
         $this->input = $_SESSION;
         
