@@ -84,14 +84,15 @@ class RequestHandle extends HandleAbstraction
     {
         try {
             if ($key === null) {
-                throw new \RuntimeException("$key isn't valid!");            
+                throw new \RuntimeException("You must specify a value to get!");            
             }
             $this->value = $key;
             
             return $this;
 
         } catch(\RuntimeException $ex) {
-            $ex->getMessage();   
+            echo $ex->getMessage();
+            exit();
         }
     }
     

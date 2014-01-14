@@ -132,7 +132,8 @@ class PassportHandle extends HandleAbstraction
             throw new \RuntimeException("$key is not a valid attribute!");
             
         } catch(\RuntimeException $ex) {
-            $ex->getMessage();   
+            echo $ex->getMessage();
+            exit();
         }
     }
     
